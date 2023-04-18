@@ -1,3 +1,4 @@
+/docs/**/secret/*
 /docs/**/secrets/*
 /docs/**/UML/*
 !/docs/**/UML/*.puml

@@ -8,5 +8,9 @@
 
 ## システムアーキテクチャ
 
+- フロントエンド
+  - Vue3 + TypeScript
+- バックエンド
+  - AWS Lambda + API Gateway
 - 認証
   - Firebase Auth

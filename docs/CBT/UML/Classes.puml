@@ -1,0 +1,21 @@
+@startuml クラス図
+
+title CBTシステム クラス図
+
+class Question {
+}
+note bottom of Question: 問題
+
+class Exam {
+}
+note bottom of Exam: 問題集
+
+class User {
+}
+note bottom of User: ユーザ
+
+class Organization {
+}
+note bottom of Organization: 組織
+
+@enduml

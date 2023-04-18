@@ -1,0 +1,21 @@
+@startuml ユースケース図
+
+title CBTシステム ユースケース図
+
+left to right direction
+
+actor "受験者" as user
+actor "管理者" as admin
+
+rectangle "CBTシステム" as system {
+  usecase 問題集の一覧取得
+  usecase 問題集の受験
+
+  usecase 問題集の管理
+}
+
+user --> 問題集の一覧取得
+user --> 問題集の受験
+admin --> 問題集の管理
+
+@enduml

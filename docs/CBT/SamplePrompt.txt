@@ -1,14 +1,21 @@
-以下のテーマに沿った問題を指定の形式で指定の数だけ考えて、指定の条件に沿ったJSONで出力してください。
-#テーマ
+Create a specified number of problems in a specified format along a specified theme and output them in JSON according to the specified conditions.
+
+#Theme
 基本情報技術者試験の問題
-#形式
-4択問題
-#生成する数
-10問
-#条件
-- 問題のリストは"quesList"と言うキーに配列で出力する
-- 問題のオブジェクトの問題のキーは"question"とする
-- 問題のオブジェクトの回答群のキーは"choices"とする
-- 問題のオブジェクトには、"anserIndex"と言うキーで正答のインデックスを持たせる
-- 問題のオブジェクトには、"explain"と言うキーで解説を持たせる
-#出力
+
+#Format
+Multiple-choice questions with 4 choices
+
+#Number of problems to generate
+10
+
+#Conditions
+
+Output the list of problems in an array with the key "quesList"
+The key for the question in the problem object is "question"
+The key for the choices in the problem object is "choices"
+Include the correct answer index in the problem object with the key "answerIndex"
+Include an explanation in the problem object with the key "explain"
+Use Japanese for the question and answer text
+
+#Output

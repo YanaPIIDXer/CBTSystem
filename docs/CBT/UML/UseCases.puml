@@ -4,18 +4,46 @@ title CBTシステム ユースケース図
 
 left to right direction
 
-actor "受験者" as user
-actor "管理者" as admin
+actor "ユーザ" as user
+actor "組織管理者" as admin
+actor "組織メンバー" as member
 
 rectangle "CBTシステム" as system {
-  usecase 問題集の一覧取得
-  usecase 問題集の受験
+  rectangle 認証 {
+    usecase ログイン
+    usecase ログアウト
+  }
+  
+  rectangle 受験  {
+    usecase 問題集の一覧取得
+    usecase 問題集の受験
+  }
 
-  usecase 問題集の管理
+  rectangle 組織管理 {
+    usecase 組織の作成
+    usecase メンバー管理
+    usecase 組織の解体
+  }
+
+  rectangle 問題集管理 {
+    usecase 問題集の作成
+    usecase 問題集のアクセス権管理
+    usecase 問題集の削除
+  }
 }
+
+user --> ログイン
+user --> ログアウト
 
 user --> 問題集の一覧取得
 user --> 問題集の受験
-admin --> 問題集の管理
+
+admin --> 組織の作成
+admin --> メンバー管理
+admin --> 組織の解体
+
+member --> 問題集の作成
+member --> 問題集のアクセス権管理
+member --> 問題集の削除
 
 @enduml

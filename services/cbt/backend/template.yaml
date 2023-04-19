@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  CBTSystem:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./lambda
+      Handler: index.handler
+      Runtime: nodejs14.x
+      Timeout: 180
+      Events:
+        Echo:
+          Type: Api
+          Properties:
+            Path: /echo
+            Method: GET
+      Environment:
+        Variables:
+          OPEN_AI_TOKEN: Dummy
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: false
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints: 
+          - src/index.ts
